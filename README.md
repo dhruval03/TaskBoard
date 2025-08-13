@@ -38,7 +38,7 @@ It features drag & drop task creation, categorization, live filtering, and searc
 ### 🎨 UI & Functional Details
 - Clean & minimal design
 - Accurate month view layout with correct day labels
-- All data stored **in-memory** (or via `localStorage` if enabled)
+- All data store `localStorage`
 - **Today’s date** highlighted for quick reference
 
 ---
