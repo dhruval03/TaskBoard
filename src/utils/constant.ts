@@ -1,5 +1,3 @@
-// Configuration constants for the calendar application
-
 import type { Priority, Status, EventType } from './types';
 
 // Priority Configuration

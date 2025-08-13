@@ -13,13 +13,11 @@ import EventModal from "./EventModal";
 import type { MyEvent } from "./EventModal";
 import FilterSidebar from "./FilterSidebar";
 
-// Import common constants and utilities
 import { TIMEFRAME_OPTIONS } from "../utils/constant";
 import { sortByPriority, DEFAULT_FILTER_STATE } from '../utils/utils'
 import { getPriorityColor, getStatusColor, getEventBackgroundColor } from '../utils/color'
 import type { FilterState, } from '../utils/types'
 
-// Constants
 const locales = { "en-US": enUS };
 const localizer = dateFnsLocalizer({
   format,
@@ -29,7 +27,7 @@ const localizer = dateFnsLocalizer({
   locales,
 });
 
-// Icon utility functions (keeping as requested)
+// Icon utility functions
 const getPriorityIcon = (priority: string) => {
   switch (priority) {
     case 'high': return <ChevronsUp className="w-4 h-4" />;
@@ -239,7 +237,6 @@ export default function CalendarView() {
 
   // Custom Toolbar Component
   const CustomToolbar = ({ onNavigate }: any) => {
-    // Format current date
     const currentDate = format(new Date(), 'MMMM d, yyyy');
 
     return (

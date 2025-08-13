@@ -1,5 +1,3 @@
-// Color utility functions for the calendar application
-
 import type { Priority, Status, EventType } from './types';
 
 // Primary Color Schemes
@@ -64,17 +62,12 @@ export const getStatusColorLight = (status: Status | string): string => {
 export const getEventBackgroundColor = (eventType: EventType | string, status?: Status | string): string => {
   if (eventType === 'task' && status) {
     switch (status) {
-      case 'completed': 
-        return "#dcfce7";
-      case 'in progress': 
-        return "#dbeafe";
-      case 'review': 
-        return "#d8b4fe";
-      case 'todo': 
-        return "#f1f5f9";
-      default: 
-        return "#f1f5f9";
+      case 'completed': return "#bbf7d0";
+      case 'in progress': return "#bae6fd";
+      case 'review': return "#e9d5ff"; 
+      case 'todo': return "#e2e8f0";
+      default: return "#e2e8f0";
     }
   }
-  return "#fef3c7";
+  return "#fde68a";
 };

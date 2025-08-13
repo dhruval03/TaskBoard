@@ -1,5 +1,3 @@
-// Utility functions for the calendar application
-
 import type { Priority, Status, EventType, FilterState } from './types';
 import { PRIORITY_ORDER, PRIORITY_OPTIONS, STATUS_OPTIONS, EVENT_TYPE_OPTIONS } from './constant';
 

@@ -5,7 +5,7 @@ import { getPriorityColorLight, getStatusColorLight, } from '../utils/color'
 import type {FilterState} from '../utils/types'
 
 
-// Icon functions (keeping as requested)
+// Icon functions
 const getPriorityIcon = (priority: string) => {
   switch (priority) {
     case 'high': return <ChevronsUp className="w-3 h-3" />;
