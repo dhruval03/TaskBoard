@@ -240,24 +240,24 @@ export default function CalendarView() {
     const currentDate = format(new Date(), 'MMMM d, yyyy');
 
     return (
-      <div className="flex items-center justify-between backdrop-blur-lg bg-gradient-to-r from-white/95 via-white/90 to-white/95 border-b border-gray-200/60 px-6 py-4 shadow-sm">
+      <div className="flex items-center justify-between backdrop-blur-lg bg-gradient-to-r from-white/95 via-cyan-50/20 to-white/95 border-b border-slate-200/50 px-6 py-4 shadow-sm">
         <div className="flex items-center gap-4">
           <div className="flex bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl overflow-hidden shadow-sm border border-gray-200/50">
             <button
               onClick={() => onNavigate('PREV')}
-              className="px-3 py-2 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-600 transition-all duration-200 text-gray-600 font-medium hover:shadow-inner"
+              className="px-3 py-2 hover:bg-gradient-to-r hover:from-cyan-50 hover:to-teal-50 hover:text-cyan-600 transition-all duration-200 text-gray-600 font-medium hover:shadow-inner"
             >
               ←
             </button>
             <button
               onClick={() => onNavigate('TODAY')}
-              className="px-4 py-2 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-600 transition-all duration-200 font-medium border-x border-gray-200/50 text-gray-700 relative before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-200"
+              className="px-4 py-2 hover:bg-gradient-to-r hover:from-cyan-50 hover:to-teal-50 hover:text-cyan-600 transition-all duration-200 font-medium border-x border-gray-200/50 text-gray-700 relative before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-200"
             >
               Today
             </button>
             <button
               onClick={() => onNavigate('NEXT')}
-              className="px-3 py-2 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-600 transition-all duration-200 text-gray-600 font-medium hover:shadow-inner"
+              className="px-3 py-2 hover:bg-gradient-to-r hover:from-cyan-50 hover:to-teal-50 hover:text-cyan-600 transition-all duration-200 text-gray-600 font-medium hover:shadow-inner"
             >
               →
             </button>
@@ -268,7 +268,7 @@ export default function CalendarView() {
 
         <div className="flex items-center gap-3">
           <button
-            className="px-4 py-2 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white rounded-xl hover:from-blue-600 hover:via-blue-700 hover:to-blue-800 transition-all duration-200 font-medium shadow-lg hover:shadow-blue-500/25 hover:scale-105 hover:-translate-y-0.5 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/0 before:via-white/20 before:to-white/0 before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700"
+            className="px-4 py-2 bg-gradient-to-r from-cyan-500 via-sky-600 to-blue-600 text-white rounded-xl hover:from-cyan-600 hover:via-sky-700 hover:to-blue-700 transition-all duration-200 font-medium shadow-lg hover:shadow-cyan-500/25 hover:scale-105 hover:-translate-y-0.5 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/0 before:via-white/20 before:to-white/0 before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700"
             onClick={() => openModal()}
           >
             + New Task
@@ -281,7 +281,7 @@ export default function CalendarView() {
             <Funnel className="w-5 h-5" />
             Filters
             {hasActiveFilters && (
-              <span className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-xs px-2 py-1 rounded-full font-medium animate-pulse shadow-lg">
+              <span className="bg-gradient-to-r from-cyan-500 to-teal-600 text-white text-xs px-2 py-1 rounded-full font-medium animate-pulse shadow-lg">
                 Active
               </span>
             )}
@@ -292,14 +292,14 @@ export default function CalendarView() {
   };
 
   return (
-    <div className="h-screen flex bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/40 overflow-hidden p-3 relative before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%)] before:pointer-events-none">
+    <div className="h-screen flex bg-gradient-to-br from-slate-50 via-cyan-50/30 to-teal-50/40 overflow-hidden p-3 relative before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_30%_20%,rgba(14,165,233,0.12),transparent_50%)] before:pointer-events-none">
       {/* Main Calendar Container */}
       <div
         className={`flex-1 overflow-hidden transition-all duration-300 ease-in-out ${sidebarOpen ? 'mr-80' : 'mr-0'
           }`}
       >
-        <div className="h-full bg-gradient-to-br from-white via-white/95 to-white/90 rounded-2xl shadow-2xl border border-white/60 backdrop-blur-sm overflow-hidden relative">
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-50/10 to-indigo-50/20 pointer-events-none"></div>
+        <div className="h-full bg-gradient-to-br from-white via-slate-50/95 to-cyan-50/30 rounded-2xl shadow-2xl border border-slate-200/40 backdrop-blur-sm overflow-hidden relative">
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-50/15 to-teal-50/20 pointer-events-none"></div>
           <div className="relative h-full">
             <DnDCalendar
               localizer={localizer}
@@ -350,6 +350,6 @@ export default function CalendarView() {
         presetStart={presetStart}
         presetEnd={presetEnd}
       />
-    </div>
+    </div >
   );
 }
