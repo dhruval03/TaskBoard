@@ -29,35 +29,6 @@ export const getStatusColor = (status: Status | string): string => {
   }
 };
 
-// Light Color Schemes (for FilterSidebar)
-export const getPriorityColorLight = (priority: Priority | string): string => {
-  switch (priority) {
-    case 'high': 
-      return 'text-red-600 bg-red-50 border-red-100';
-    case 'medium': 
-      return 'text-amber-600 bg-amber-50 border-amber-100';
-    case 'low': 
-      return 'text-emerald-600 bg-emerald-50 border-emerald-100';
-    default: 
-      return 'text-slate-600 bg-slate-50 border-slate-100';
-  }
-};
-
-export const getStatusColorLight = (status: Status | string): string => {
-  switch (status) {
-    case 'completed': 
-      return 'text-emerald-600 bg-emerald-50 border-emerald-100';
-    case 'in progress': 
-      return 'text-blue-600 bg-blue-50 border-blue-100';
-    case 'review': 
-      return 'text-violet-600 bg-violet-50 border-violet-100';
-    case 'todo': 
-      return 'text-slate-600 bg-slate-50 border-slate-100';
-    default: 
-      return 'text-slate-600 bg-slate-50 border-slate-100';
-  }
-};
-
 // Event Background Colors for Calendar
 export const getEventBackgroundColor = (eventType: EventType | string, status?: Status | string): string => {
   if (eventType === 'task' && status) {

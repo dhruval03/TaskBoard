@@ -1,7 +1,7 @@
 import { ChevronsUp, Minus, ChevronsDown, CheckCircle2, Zap, Eye, Circle, X, Search } from "lucide-react";
 
 import { PRIORITY_OPTIONS, STATUS_OPTIONS,TIMEFRAME_OPTIONS} from "../utils/constant";
-import { getPriorityColorLight, getStatusColorLight, } from '../utils/color'
+import { getPriorityColor, getStatusColor } from '../utils/color'
 import type {FilterState} from '../utils/types'
 
 
@@ -136,7 +136,7 @@ export default function FilterSidebar({
                       </span>
                     </div>
                     {filters.type !== 'event' && (
-                      <div className={`p-1.5 rounded-lg border-2 transition-all duration-200 group-hover:scale-105 ${getPriorityColorLight(priority)}`}>
+                      <div className={`p-1.5 rounded-lg border-2 transition-all duration-200 group-hover:scale-105 ${getPriorityColor(priority)}`}>
                         {getPriorityIcon(priority)}
                       </div>
                     )}
@@ -168,7 +168,7 @@ export default function FilterSidebar({
                       </span>
                     </div>
                     {filters.type !== 'event' && (
-                      <div className={`p-1.5 rounded-lg border-2 transition-all duration-200 group-hover:scale-105 ${getStatusColorLight(status)}`}>
+                      <div className={`p-1.5 rounded-lg border-2 transition-all duration-200 group-hover:scale-105 ${getStatusColor(status)}`}>
                         {getStatusIcon(status)}
                       </div>
                     )}

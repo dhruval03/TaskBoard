@@ -1,5 +1,5 @@
-import type { Priority, Status, EventType, FilterState } from './types';
-import { PRIORITY_ORDER, PRIORITY_OPTIONS, STATUS_OPTIONS, EVENT_TYPE_OPTIONS } from './constant';
+import type { Priority, Status, FilterState } from './types';
+import { PRIORITY_ORDER } from './constant';
 
 // Display Labels
 export const getPriorityLabel = (priority: Priority | string): string => {
@@ -8,19 +8,6 @@ export const getPriorityLabel = (priority: Priority | string): string => {
 
 export const getStatusLabel = (status: Status | string): string => {
   return status === 'todo' ? 'To Do' : status.charAt(0).toUpperCase() + status.slice(1);
-};
-
-// Validation Utilities
-export const isValidPriority = (priority: string): priority is Priority => {
-  return PRIORITY_OPTIONS.includes(priority as Priority);
-};
-
-export const isValidStatus = (status: string): status is Status => {
-  return STATUS_OPTIONS.includes(status as Status);
-};
-
-export const isValidEventType = (type: string): type is EventType => {
-  return EVENT_TYPE_OPTIONS.includes(type as EventType);
 };
 
 // Sorting Utilities
